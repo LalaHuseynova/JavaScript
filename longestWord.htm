@@ -15,24 +15,6 @@
     <input type="text" id="sentence">
     <button onclick="convert()">Find the longest word</button>
     <p id="result"></p>
-
-    <script>
-         let sentence = document.getElementById('sentence')
-         let result = document.getElementById('result')
-         let str
-         let str2
-         function convert(){
-            str=sentence.value 
-            str2=str.split(' ')
-            let longest=''
-            for(let i=0;i<str2.length;i++){
-                if(str2[i].length>longest.length){
-                    longest=str2[i]
-                }
-            }
-            result.innerHTML=longest
-         }
-
-    </script>
+    <script src="longestWord.js"></script>
 </body>
 </html>
