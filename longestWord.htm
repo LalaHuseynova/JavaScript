@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{text-align: center;}
+        input{margin: 50px auto; width: 30%; display: flex; height: 60px; padding: 0 0px 0 20px; font: 1.5em Arial;}
+        button{margin: 50px auto; display: flex; height: 40px; }
+        #result{ font: 2em Arial;}
+    </style>
+</head>
+<body>
+    <input type="text" id="sentence">
+    <button onclick="convert()">Find the longest word</button>
+    <p id="result"></p>
+
+    <script>
+         let sentence = document.getElementById('sentence')
+         let result = document.getElementById('result')
+         let str
+         let str2
+         function convert(){
+            str=sentence.value 
+            str2=str.split(' ')
+            let longest=''
+            for(let i=0;i<str2.length;i++){
+                if(str2[i].length>longest.length){
+                    longest=str2[i]
+                }
+            }
+            result.innerHTML=longest
+         }
+
+    </script>
+</body>
+</html>
