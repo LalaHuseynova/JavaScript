@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="a">
+    <input type="number" id="b">
+    <button onclick="operation()">Ok</button>
+    <p id="result"></p>
+    <script>
+        let a=document.getElementById('a')
+        let b=document.getElementById('b')
+        function operation (){ 
+        let rectangle= {
+           width: a.value,
+           height: b.value,
+           getArea: function() {
+            return Number(this.width) * Number(this.height)
+           },
+           getPerimetr: function(){
+            return 2* (Number(this.width)+ Number(this.height))
+           }
+
+        };
+        let result=document.getElementById('result')
+        result.innerHTML= "Area: "+rectangle.getArea() + "</br>  Perimetr: " + rectangle.getPerimetr()
+     }
+    </script>
+</body>
+</html>
