@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+        #basla { font-size: 1.2em;}
+        table { border-collapse: collapse; margin: 50px auto 0; font: bold 1.6em Arial }
+        td { width: 100px; height: 100px; border: 1px solid #333; text-align: center; }
+        span{font: 2em;}
+        button{margin: 20px auto 0;}
+    </style>
+</head>
+<body>
+    <button onclick="basla()" id="basla">Basla</button>
+    <p><span id="minutes">00</span> : <span id="seconds">00</span></p>
+    <table id="tbl"></table>
+    <button onclick="initialize()">Reset</button>
+    <script src="findingCorrectNum.js"></script>
+</body>
+</html>
